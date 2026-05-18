@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Discovery — EatEasy</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Chart.js: JS Library #1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand"><span>🍽️</span> EatEasy</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/meals" class="active">Meal Discovery</a></li>
+      <li><a href="/breweries">Brewery Finder</a></li>
+      <li><a href="/cocktails">Cocktail Pairing</a></li>
+      <li><a href="/favorites">Favorites</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:3rem 2rem 2.5rem;">
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);">Meal Discovery</h1>
+    <p>Search by ingredient or get inspired with a random meal.</p>
+    <div class="search-bar">
+      <input type="text" id="ingredientInput" placeholder="Search by ingredient (e.g. chicken, garlic)..." />
+      <button class="btn btn-primary" id="searchBtn">Search</button>
+      <button class="btn btn-ghost" id="randomBtn">🎲 Random</button>
+    </div>
+  </section>
+
+  <main>
+    <div id="status" class="status"></div>
+    <div id="loader" class="loader" style="display:none;"><span class="loader-spinner"></span>Loading...</div>
+
+    <!-- Meal result grid -->
+    <div id="mealGrid" class="card-grid"></div>
+
+    <!-- Detail panel -->
+    <div id="detailPanel" class="detail-panel">
+      <div class="detail-top">
+        <img id="detailImg" src="" alt="">
+        <div class="detail-meta">
+          <h2 id="detailName"></h2>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+            <span id="detailCategory" class="tag tag-navy"></span>
+            <span id="detailArea" class="tag tag-gold"></span>
+          </div>
+          <div id="ingredientList" class="ingredient-list"></div>
+          <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a id="youtubeLink" href="#" target="_blank" class="btn btn-primary btn-sm">▶ Watch on YouTube</a>
+            <button id="saveMealBtn" class="btn btn-outline btn-sm">♡ Save to Favorites</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.5rem;">Cooking Instructions</p>
+        <p id="detailInstructions" class="instructions"></p>
+      </div>
+
+      <!-- Ingredient chart (Chart.js) -->
+      <div style="margin-top:2rem;max-width:480px;">
+        <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.75rem;">Ingredient Breakdown</p>
+        <canvas id="ingredientChart" height="180"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <footer>EatEasy &mdash; INST 377 &middot; Spring 2026</footer>
+  <div class="toast" id="toast"></div>
+  <script src="/js/meals.js"></script>
+</body>
+</html>

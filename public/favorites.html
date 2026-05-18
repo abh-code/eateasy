@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites — EatEasy</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand"><span>🍽️</span> EatEasy</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/meals">Meal Discovery</a></li>
+      <li><a href="/breweries">Brewery Finder</a></li>
+      <li><a href="/cocktails">Cocktail Pairing</a></li>
+      <li><a href="/favorites" class="active">Favorites</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:3rem 2rem 2.5rem;">
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);">Your Favorites</h1>
+    <p>Meals and cocktails you've saved for later.</p>
+    <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+      <button class="btn btn-ghost filter-btn active" data-type="all">All</button>
+      <button class="btn btn-ghost filter-btn" data-type="meal">🍲 Meals</button>
+      <button class="btn btn-ghost filter-btn" data-type="cocktail">🍹 Cocktails</button>
+    </div>
+  </section>
+
+  <main>
+    <div id="loader" class="loader" style="display:none;"><span class="loader-spinner"></span>Loading favorites...</div>
+    <div id="favGrid" class="card-grid"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <div class="icon">💔</div>
+      <p>No favorites saved yet.</p>
+      <p style="font-size:0.85rem;margin-top:0.5rem;">Head to <a href="/meals">Meal Discovery</a> or <a href="/cocktails">Cocktail Pairing</a> to save some!</p>
+    </div>
+  </main>
+
+  <footer>EatEasy &mdash; INST 377 &middot; Spring 2026</footer>
+  <div class="toast" id="toast"></div>
+  <style>
+    .filter-btn { border: 1px solid rgba(255,255,255,0.3); }
+    .filter-btn.active { background: rgba(255,255,255,0.25); color: white; }
+    .fav-card { position: relative; }
+    .fav-card .remove-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .fav-card .remove-btn:hover { background: var(--red); }
+  </style>
+  <script src="/js/favorites.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — EatEasy</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand"><span>🍽️</span> EatEasy</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/meals">Meal Discovery</a></li>
+      <li><a href="/breweries">Brewery Finder</a></li>
+      <li><a href="/cocktails">Cocktail Pairing</a></li>
+      <li><a href="/favorites">Favorites</a></li>
+      <li><a href="/about" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="padding:3rem 2rem 2.5rem;">
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);">About EatEasy</h1>
+    <p>A food and lifestyle discovery tool — INST 377, Spring 2026</p>
+  </section>
+
+  <main>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;">What is EatEasy?</h3>
+        <p style="font-size:0.9rem;line-height:1.75;color:var(--gray-600);">
+          EatEasy helps people break out of their everyday cooking routines by discovering new recipes, finding local breweries, and pairing cocktails with their meals — all in one place. Built as a dynamic web application for INST 377 using three public APIs.
+        </p>
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.5rem;">Built by</p>
+          <p style="font-size:0.9rem;font-weight:500;">Amar Hassan &middot; INST 377 &middot; Spring 2026</p>
+        </div>
+
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.75rem;">How to Use EatEasy</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="background:var(--navy);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">1</span>
+              <div>
+                <strong style="font-size:0.9rem;">Discover a Meal</strong>
+                <p style="font-size:0.83rem;color:var(--gray-600);margin-top:0.2rem;">Go to Meal Discovery. Click "Random" for inspiration, or search by ingredient.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="background:var(--navy);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">2</span>
+              <div>
+                <strong style="font-size:0.9rem;">Find a Brewery</strong>
+                <p style="font-size:0.83rem;color:var(--gray-600);margin-top:0.2rem;">Enter any U.S. city to get a list of local craft breweries.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="background:var(--navy);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">3</span>
+              <div>
+                <strong style="font-size:0.9rem;">Pair a Cocktail</strong>
+                <p style="font-size:0.83rem;color:var(--gray-600);margin-top:0.2rem;">Search by ingredient on the Cocktail Pairing page to browse and view full recipes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:1rem;">APIs Used</h3>
+        <div class="api-item">
+          <span class="api-icon">🍲</span>
+          <div>
+            <strong style="font-size:0.9rem;">TheMealDB</strong>
+            <p style="font-size:0.82rem;color:var(--gray-600);">Recipes and cooking instructions from around the world</p>
+            <a href="https://www.themealdb.com/api.php" target="_blank" style="font-size:0.78rem;color:var(--navy);">themealdb.com/api.php</a>
+          </div>
+        </div>
+        <div class="api-item">
+          <span class="api-icon">🍺</span>
+          <div>
+            <strong style="font-size:0.9rem;">Open Brewery DB</strong>
+            <p style="font-size:0.82rem;color:var(--gray-600);">U.S. craft brewery data — search by city or state</p>
+            <a href="https://www.openbrewerydb.org" target="_blank" style="font-size:0.78rem;color:var(--navy);">openbrewerydb.org</a>
+          </div>
+        </div>
+        <div class="api-item">
+          <span class="api-icon">🍹</span>
+          <div>
+            <strong style="font-size:0.9rem;">TheCocktailDB</strong>
+            <p style="font-size:0.82rem;color:var(--gray-600);">Cocktail recipes — search by ingredient or name</p>
+            <a href="https://www.thecocktaildb.com/api.php" target="_blank" style="font-size:0.78rem;color:var(--navy);">thecocktaildb.com/api.php</a>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem;">
+          <p style="font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:0.75rem;">JS Libraries Used</p>
+          <div class="api-item">
+            <span class="api-icon">📊</span>
+            <div>
+              <strong style="font-size:0.9rem;">Chart.js v4</strong>
+              <p style="font-size:0.82rem;color:var(--gray-600);">Ingredient count chart on Meal Discovery & brewery type breakdown</p>
+            </div>
+          </div>
+          <div class="api-item">
+            <span class="api-icon">🎠</span>
+            <div>
+              <strong style="font-size:0.9rem;">Splide.js v4</strong>
+              <p style="font-size:0.82rem;color:var(--gray-600);">Responsive image slider on the Cocktail Pairing page</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>EatEasy &mdash; INST 377 &middot; Spring 2026</footer>
+</body>
+</html>
