@@ -1,5 +1,5 @@
 # EatEasy — Meal & Brewery Discovery Web Application
-
+**Live Demo:** https://eateasy-five.vercel.app
 ## Description
 
 EatEasy is a full stack web application built for INST 377 that helps users discover new recipes, find local craft breweries, and pair cocktails with their meals all in one place. Users can search for meals by ingredient, get a random meal suggestion from around the world, find breweries in any U.S. city, and browse cocktail recipes by ingredient. Any meal or cocktail can be saved to a personal favorites list powered by a Supabase database on the backend.
